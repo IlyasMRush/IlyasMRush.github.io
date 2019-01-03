@@ -1,0 +1,205 @@
+<html lang="en">
+
+<head>
+	<title>loeuf's portfolio</title>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="JJJ's portfolio website">
+	<meta name="author" content="JaimeLoeuf">
+
+	<!-- Custom styles for this template -->
+	<link rel="stylesheet" href="styles/index.css">
+	<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.5.0/css/all.css' integrity='sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU' crossorigin='anonymous'>
+</head>
+
+<body id="top" class="grid-container">
+	<h3 class="title">Hi there! Welcome to my portfolio!</h3>
+
+	<!-- Projects page will be all the projects in detailed. Unlike the home page which skims thru -->
+	<!-- Perhaps use alternating colors to block out the nav bar -->
+	<div class="nav-bar">
+		<a href="#">Home</a>
+		<a href="/about.html">About</a>
+		<a href="/resume.html">Resume/Skill-set</a>
+		<a href="#projects">Projects</a>
+		<a href="#">Contact Me</a>
+	</div>
+
+	<img src="imgs/profile.png" alt="Me!">
+
+	<div class="contact-me">
+		<a href="#" class='far fa-address-card' id="num" onclick="
+			if (document.getElementById('num').innerHTML === ' 94263687')
+				reset();
+			else {
+				setChanges();
+				setTimeout(() => reset(), 5000);
+			}
+			function setChanges() { // Change the icon out to my number
+				document.getElementById('num').className = ''; // Remove the contact icon
+				document.getElementById('num').innerHTML = ' 94263687';
+			}
+			function reset() { // Resets back to original layout
+				document.getElementById('num').className = 'far fa-address-card'; // Add the contact icon back
+				document.getElementById('num').innerHTML = ' Contact';
+			}
+		" style='font-size: 1.8em; font-weight: 200;'> Contact</a><br><br>
+		<a href="https://github.com/Jaimeloeuf" class='fab fa-github' style='font-size: 1.9em; font-weight: 200;'> GitHub</a><br><br>
+		<a href="mailto:jaimeloeuf@gmail.com" class='fas fa-envelope' id="email" onclick="
+			document.getElementById('email').className = ''; // Remove the email icon
+			document.getElementById('email').style.fontSize = '1.1em';
+			document.getElementById('email').innerHTML='jaimeloeuf@gmail.com';
+		" style='font-size: 2em; font-weight: 200;'> Email</a>
+	</div>
+
+	<div class="about-me" style="text-align: center;">
+		Graduated from Dunman Secondary School in 2016<br>
+		Currently studying at <a href="https://www.tp.edu.sg/" target="_blank">Temasek Polytechnic Singapore</a><br>
+		I love to study interesting stuff and like to tinker with tech I learn!<br>
+		Always involved in lots of projects and competitions/hackathons!<br>
+	</div>
+
+	<div class="skill-set">
+		<pre>
+			<span style="font-weight: bold;">General Tool Chain knowledge:</span>
+				- Comfortable with pure CLI systems and toolchains.
+				- git version control. View my <a href="https://github.com/Jaimeloeuf">Github account</a>.
+				- gcc/g++ (Optimization and custom usages)
+				- make tool (Building from source)
+				- Embedded Systems toolchains like the GNU toolchain.
+				- Comfortable with using NI's LabView software for Graphical
+				  Programming of Data Aquisition Devices.
+				- Working knowledge of networking technologies and usage.
+			
+			<span style="font-weight: bolder;">Programming Knowledge</span>
+			<span style="font-weight: bold;">C, C++ and especially familiar with embedded C programming:</span>
+				- Did many years of Competitve C/C++ Programming for UVA Judge,
+				  with focus on Data Structure based and Algorthimic questions.
+				- Experienced with building Libraries for collaborative work in C/C++.
+				- Familiar with Data processing and Heap Memory manipulation
+				  with C (Optimization for Embedded devices)
+				- Experienced with Embeddded device programming and familiar with
+				  toolchains such as gcc/g++, CMake, Atmel Studio, MPLAB IDE,
+				  Arduino and other Cross Compiling technologies / techniques.
+				- General speaking, I am familiar and comfortable with using the
+				  GNU and LLVM toolchain for C & C++ developement.
+			
+			<span style="font-weight: bold;">FullStack Web developement Experiences</span>
+			<span style="font-weight: bold;">Frontend:</span>
+				- Experiences with many implementation of front end work using
+				  the latest RWD technologies and techniques such as CSS grid,
+				  which is also used on this site.
+				- Working understanding of React.JS
+				- Most of my websites like this website is built entirely from
+				  scratch without any framework with Web Standards like
+				  Web Components, CSS Grids, Shadow Dom and more.
+				- Basic working understanding of BootStrap usage.
+
+			<span style="font-weight: bold;">Backend:</span>
+				- Pure Node JS server developement without using any
+				  frameworks like Express.JS, Hapi.JS or Sails.JS
+					= Created many web services before, I am also currently developing
+					  a Web App for my own startup with the Full Stack done by myself.
+					= Experienced with Server Side Rendering/Rendered (SSR) content
+					= Experienced with Server deployment and architect designs
+					= Experienced with building custom made Security Systems.
+						= Use of JWT / BCrypt / OAuth and OpenID
+					= Integration with NGINX as reverse proxy and load balancer
+				- Although most of my Web Services' backend is build with vanilla Node.JS,
+				  I am also familiar with using Frameworks such as Express.JS and
+				  Koa.JS (With ES6 Generators and interators / async/await).
+				- Familiar with Univeral Rendering and design patterns
+				  of Isomorphic or Universally Rendered WebApps.
+				- Created a custom implementation of a middleware library.
+					= Experienced with implementing Middleware design/flow-controls.
+					= Experienced with API Adapter design implementation.
+					= Lib used for data sanitization/filtering for data analytics
+					= middelware for HTTP req/res objects for my Pure Node JS server
+				- python server developement with Flask framework
+				 <i style="font-size: 85%;">* All of my backend Web Services and Web Apps are built with the <span style="font-weight: bold;">Microservice</span>
+					<span style="font-weight: bold;">Architecture</span> and design patterns with emphasis on Scaling and Optimizations.</i>
+				- Working knowledge of LAMPP / XAMPP / WAMP stack.
+
+			<span style="font-weight: bold;">Java:</span>
+				- Strong knowledge in OOP design and modeling.
+				- Familiar with ORM technique.
+				- Familiar with JVM theory and concepts.
+				- Familiar with use of JVM with other runtime languages such
+				  as Kotlin and Scala. Kotlin for Android dev too.
+
+			<span style="font-weight: bold;">Other Native related technologies:</span>
+				- Working knowledge of Electron JS technology and usage.
+				- React JS experiences that can help me in future endeavours with
+				  React Native when required
+				- Java Swing GUI library for Desktop App developement.
+				- Brief exposure to Android developement
+
+			<span style="font-weight: bold;">Python:</span>
+				- Working knowledge of Python
+				- Working experience of using Python as backend web server with Flask
+				- Did some competitve programming in Python before, with focus
+				  on optimizations and clean API.
+				  View the above in my Github <a href="https://github.com/Jaimeloeuf/pythonmorsels">repo</a>.
+			
+			<span style="font-weight: bold;">AI Related</span>
+				Working knowledge on Machine Learning and Deep Learning
+				with tools like Tensorflow and Tensorflow JS.
+				Participated in Microsoft Imagine Cup 2019 with a project
+				focused heavily on image recognition and classification
+				with custom built algorthims and neural networks.
+			
+			<span style="font-weight: bold;">Security</span>
+				Experiences with security implementations in the Web Dev field.
+				Basic understanding of ethical hacking and some experiences with
+				tools in Kali Linux such as Metasploit/Armitage and NMap/Zenmap.
+				Basic experiences with hardware reverse engineering.
+
+			<span style="font-weight: bold;">Others:</span>
+				Database Design and usage:
+					- Some experiences with mySQL and Relational Databases
+					- Some experiences with NoSQL using MongoDB
+					- Basic experiences with GraphQL
+				Familiar and comfortable with many programming paradigms:
+					- Procedual programming (C/C++ and Embedded Devices)
+					- Object Oriented Programming (JavaScript / C++ / Java / Python)
+					- Funtional Programming (JavaScript)
+					- Basic understanding of Reactive Programming with RxJS
+				
+			<span style="font-weight: bold;">Electronics:</span>
+				- Familiar with using most lab equipments such as
+				  analog/digital oscilloscopes.
+				- Specialise in mixed circuit designs and logic controllers.
+				- Familiar with Power supply design and Signal Conditioning
+				  techniques and circuit design.
+				- Familiar with Amplifier designs and really interested
+				  in these, I have a project based on this as well
+				  where I designed and created my own Speaker Amp.
+				- Basic knowledge of FPGAs.
+		</pre>
+	</div>
+
+	<div id="projects" class="projects">
+		<pre>
+			Some projects that I have done:
+			- <a href="#top">This website you are seeing is fully built by me.</a>
+			- <a href="https://github.com/Jaimeloeuf/Pure-Node.JS-API-Server" target="_blank">Pure Node JS Server Framework</a>
+			- <a href="https://github.com/Jaimeloeuf/GDP-analytics" target="_blank">GDP Analytics App in C</a>
+			- <a href="https://github.com/Jaimeloeuf/UVA-Judge-problems" target="_blank">Competitve C/C++ Programming for UVA Judge</a>
+			- <a href="https://github.com/Jaimeloeuf/Movie-Booking-App" target="_blank">Java 'Movie Booking' GUI Application.</a>
+			- <a href="https://github.com/Jaimeloeuf/pythonmorsels" target="_blank">Competitve Python Programming code</a>
+			- <a href="#" target="">Fan controller</a>
+		</pre>
+	</div>
+
+	<footer class="footer">
+		<pre style="font-weight: bold;">
+		<!-- Fix the fond weight, make the color darker but not too bold and thick -->
+		<a href="#top">Back to Top ^</a>
+		&copy;JaimeLoeuf
+		&copy;JJ	2018
+		</pre>
+	</footer>
+</body>
+
+</html>

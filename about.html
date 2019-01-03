@@ -1,0 +1,100 @@
+<html lang="en">
+
+<head>
+	<title>loeuf's portfolio</title>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="JJJ's portfolio website">
+	<meta name="author" content="JaimeLoeuf">
+
+	<!-- Custom styles for this template -->
+	<link rel="stylesheet" href="styles/about.css">
+	<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.5.0/css/all.css' integrity='sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU'
+	 crossorigin='anonymous'>
+</head>
+
+<body id="top" class="grid-container">
+	<h3 class="title">My personal details / lyfe!</h3>
+
+	<div class="nav-bar">
+		<a href="/index.html">Home</a>
+		<a href="#">About</a>
+		<a href="/resume.html">Resume/Skill-set</a>
+		<a href="#projects">Projects</a>
+		<a href="#">Contact Me</a>
+	</div>
+
+	<img src="imgs/profile.png" alt="Me!" href="/">
+
+	<div class="contact-me">
+		<a href="#" class='far fa-address-card' id="num" onclick="
+			if (document.getElementById('num').innerHTML === ' 94263687')
+				reset();
+			else {
+				setChanges();
+				setTimeout(() => reset(), 5000);
+			}
+			function setChanges() { // Change the icon out to my number
+				document.getElementById('num').className = ''; // Remove the contact icon
+				document.getElementById('num').innerHTML = ' 94263687';
+			}
+			function reset() { // Resets back to original layout
+				document.getElementById('num').className = 'far fa-address-card'; // Add the contact icon back
+				document.getElementById('num').innerHTML = ' Contact';
+			}
+		"
+		 style='font-size: 1.8em; font-weight: 200;'> Contact</a><br><br>
+		<a href="https://github.com/Jaimeloeuf" class='fab fa-github' style='font-size: 1.9em; font-weight: 200;'> GitHub</a><br><br>
+		<a href="mailto:jaimeloeuf@gmail.com" class='fas fa-envelope' id="email" onclick="
+			document.getElementById('email').className = ''; // Remove the email icon
+			document.getElementById('email').style.fontSize = '1.1em';
+			document.getElementById('email').innerHTML='jaimeloeuf@gmail.com';
+		"
+		 style='font-size: 2em; font-weight: 200;'> Email</a>
+	</div>
+
+
+	<!-- Add my personal stuff like stories blog? Insta and stuff also can -->
+	<div class="about-me">
+		<pre>
+			<span style="font-weight: bold;">About me</span>
+				- I was born and raised in Singapore in a Chinese family.
+				- I went to a normal neighbourhood secondary school and 
+				- My interest in electronics begin when I read a book (I forgot what was the book's title)
+				  and it said something about a foxhole radio.
+				  That got me really interested now. Because if you know, as foxhole radio is a radio that
+				  does not need any power to operate, because it operates entirely off the power of the radio waves
+				  in the air. That amazed me because I never heard of something that is entirely wirelessly powered before.
+				  I decided to try and bui
+
+
+			<!-- Perhaps for the below portions, I should publish all these articles to github-->
+			<!-- In the guthub for the review thing, remember to add in the name of the book and the ISBN -->
+			<span style="font-weight: bold;">Book summary / review</span>
+				- <a href="#">The Business Book</a>
+
+			<span style="font-weight: bold;">Recommended Book Lists</span>
+				- <a href="#">The criminal biology</a>
+					- A book that talks about some uncomfortable yet scientifically provable ideas.
+				- <a href="#">The Business Book</a>
+				- <a href="#">The liberal investing</a>
+				- <a href="#">F.U Money</a>
+					- Life changing book on the success mindset by Dan Lok.
+
+			<span style="font-weight: bold;">Video reports</span>
+				- <a href="#">How to remember what you learned</a>
+		</pre>
+	</div>
+
+	<footer class="footer">
+		<pre style="font-weight: bold;">
+		<!-- Fix the fond weight, make the color darker but not too bold and thick -->
+		<a href="#top">Back to Top ^</a>
+		&copy;JaimeLoeuf
+		&copy;JJ	2018
+		</pre>
+	</footer>
+</body>
+
+</html>
