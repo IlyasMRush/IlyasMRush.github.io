@@ -1,0 +1,25 @@
+---
+---
+
+/*
+  If the number of TAB files has changed, the following variable is required.
+  And it must be defined before `@import`.
+*/
+$tab-count: {{ site.tabs | size | plus: 1 }}; // plus 1 for home tab
+
+@import "{{ site.theme }}";
+
+/* append your custom style below */
+
+/* background change
+#main-wrapper {
+    background: center/cover  linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url("/assets/img/background.png") no-repeat;
+  } */
+
+
+#sidebar{
+  font-family: arcadeclassic;
+} 
+#topbar{
+  font-family: arcadeclassic;
+} 

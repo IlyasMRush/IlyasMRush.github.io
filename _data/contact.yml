@@ -1,18 +1,24 @@
 #  The contact options.
+#  Icons from <https://fontawesome.com/>
 
-- type: github
-  icon: "fab fa-github"
 
-- type: twitter
-  icon: "fab fa-twitter"
+- type: itch-io
+  icon: 'fab fa-itch-io'
+  url:  'https://runescribe.itch.io' 
 
-- type: email
-  icon: "fas fa-envelope"
-  noblank: true # open link in current tab
+# - type: github
+#   icon: "fab fa-github"
 
-- type: rss
-  icon: "fas fa-rss"
-  noblank: true
+# - type: twitter
+#   icon: "fab fa-twitter"
+
+# - type: email
+#   icon: "fas fa-envelope"
+#   noblank: true # open link in current tab
+
+# - type: rss
+#   icon: "fas fa-rss"
+#   noblank: true
 # Uncomment and complete the url below to enable more contact options
 #
 # - type: mastodon
