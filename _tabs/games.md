@@ -7,4 +7,4 @@ order: 2
 
 1. [Snake Game][1]
 
-[1]:{{ site.url }}/download/file.pdf
+[1]:{{ site.baseurl }}{% link _posts/2023-03-25-retropy-movement-tutorial-part-1.md %}

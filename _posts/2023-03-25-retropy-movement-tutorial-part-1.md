@@ -15,7 +15,7 @@ Before we begin, I recommend downloading the asset below as we will be using it 
 Asset:
 [playerT.rs4][1]
 
-[1]:{{ site.url }}/download/file.pdf
+[1]:{{ site.baseurl }}{% link _posts/2023-03-25-retropy-movement-tutorial-part-1.md %}
 
 Once you have downloaded the asset, place it in the assets directory of your retroPy.
 
