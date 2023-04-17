@@ -1,0 +1,26 @@
+---
+layout: page
+# All the Tags of posts.
+---
+
+<div id="retropy" class="d-flex flex-wrap ml-xl-2 mr-xl-2">
+
+  {% assign retropy = "" | split: "" %}
+  {% for t in site.retropy %}
+    {% assign retropy = retropy | push: t[0] %}
+  {% endfor %}
+
+  {% assign sorted_retropy = retropy | sort_natural %}
+
+  {% for t in sorted_retropy %}
+    <div>
+      <a class="tag" href="{{ t | slugify | url_encode | prepend: '/retropy/' | append: '/' | relative_url }}">
+        {{ t }}<span class="text-muted">{{ site.retropy[t].size }}</span>
+      </a>
+    </div>
+  {% endfor %}
+
+</div>
+
+
+

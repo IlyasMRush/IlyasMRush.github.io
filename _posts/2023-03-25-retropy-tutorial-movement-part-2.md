@@ -1,32 +1,39 @@
 ---
 title: retroPy Movement (Part II)
 date: 2022-04-23 12:00:00 -500
-categories: [retroPy,Tutorials]
+categories: [retroPy Tutorials, Movement]
 tags: []
 ---
 
 ## Introduction
 
-In this tutorial we will be continuing our code from the [previous tutorial][1] by adding a jumping mechanic for our player.
+In this tutorial, we will be continuing our code from the [previous tutorial][1] by adding a jumping mechanic for our player.
 
-[1]:{{ site.baseurl }}{% link _posts/2023-03-25-retropy-movement-tutorial-part-1.md %}
+[1]:{{ site.baseurl }}{% link _posts/2023-03-25-retropy-tutorial-movement-part-1.md %}
 
-We will assign Button A for jumping.  In order to sump, we need to give relatively large value to player.speed_y eg -190.  The value is negative since we need the player to move up the screen. We will use a player_jumpSpeed 
+## Jumping
 
+We will utilize Button A for jumping. In order to jump, we need to give a relatively large value to `player.speed_y` e.g -190. The value is negative since we need the player to move upwards. We will also assign a global variable `player_jumpSpeed`
+
+```python
 player_jumpSpeed = -190
 if rpy.btnADown():
-player.speed_y = player_jumpSpeed
+    player.speed_y = player_jumpSpeed
+```
 
+Our player can now jump. However, if you continuously press the A Button, the player will be able to jump out of the screen. This is undesirable and we would like to jump once.
 
-This works but if you continuously press the A Button, the player will so go out of the top screen.  It seems that our player can fly.
-To avoid this, we will have to keep track of the player position.  Jump only if the player is no the ground.
-We’ll start with 
-player_isGrounded = False
-when is reach the ground we will set it to True
+To avoid this, we will have to keep track of the player's position and allow him to jump only if he is on the ground by using the code below:
+
+```python
     if player.bot_y > groundLevel:
        player.bot_y = groundLevel-1
-       player_isGrounded = True
-(Don’t forget we also need to include the global for our new variables)
+```
+
+Let's create another global variable `player_isGrounded = False` and set it to `True` when he has hit the ground.
+
+Once everything is implemented, the code should look as follows:
+
 ```python
 player_walkSpeed = 50
 player_jumpSpeed = -190
@@ -60,18 +67,20 @@ def update(dt):
        player.bot_y = groundLevel-1
        player_isGrounded = True
 ```
-(move-04)
 
-Double Jump / Multiple Jumps
+## Double Jump / Multiple Jumps
 
 To achieve multiple jumps, we need to keep track of a few more states.
+
 ```python
 player_isJumping = False
 player_jumpCount = 0
 player_jumpMax = 2
 ```
-We need to check if player is Jumping with player_isJumping
-We need to track how many multiple jump has been made and make sure that it doesn’t exceed the maximum player_jumpMax.
+
+We need to check if player is Jumping with `player_isJumping`
+We need to track how many multiple jump has been made and make sure that it doesn’t exceed the maximum `player_jumpMax`.
+
 ```python
     if player_isGrounded:
         player.acc_y = 0
@@ -90,12 +99,14 @@ We need to track how many multiple jump has been made and make sure that it does
                 player.speed_y = player_jumpSpeed
                 player_jumpCount += 1
 ```
+
 Again, don’t forget to add the globals:
     `global player_isJumping, player_jumpCount, player_jumpMax`
 
-At this point you will be able to do a double jump to increase the number of multiple jumps, just change the value of player_jumpMax
+At this point you will be able to do a double jump to increase the number of multiple jumps, just change the value of `player_jumpMax`
 
 Full code:
+
 ```python
 from retroPy import rpy, actor, LoadSprite
 
@@ -161,7 +172,6 @@ def draw():
 #=========================================================================
 rpy.run(update, draw)
 ```
-(move-05)
 
 
 

@@ -20,6 +20,17 @@ $tab-count: {{ site.tabs | size | plus: 1 }}; // plus 1 for home tab
 #sidebar{
   font-family: arcadeclassic;
 } 
+
 #topbar{
   font-family: arcadeclassic;
 } 
+
+#topbar-title{
+  font-family: arcadeclassic;
+} 
+
+#avatar{
+  display: none;
+}
+
+

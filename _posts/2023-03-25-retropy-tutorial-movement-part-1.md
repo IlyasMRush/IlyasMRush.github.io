@@ -1,13 +1,13 @@
 ---
 title: retroPy Movement (Part I)
 date: 2022-04-23 12:00:00 -500
-categories: [retroPy,Tutorials]
+categories: [retroPy Tutorials, Movement]
 tags: []
 ---
 
 ## Introduction
 
-Welcome to the retroPy Movement tutorial. For this tutorial, we will go learn to move and control sprites in your retroPy game. 
+Welcome to the retroPy Movement tutorial. For this tutorial, we will learn to move and control sprites in your retroPy game. 
 
 ## Installing Asset
 Before we begin, I recommend downloading the asset below as we will be using it in this tutorial.
@@ -15,7 +15,7 @@ Before we begin, I recommend downloading the asset below as we will be using it 
 Asset:
 [playerT.rs4][1]
 
-[1]:{{ site.baseurl }}{% link _posts/2023-03-25-retropy-movement-tutorial-part-1.md %}
+[1]:{{ site.url }}/assets/downloads/playerT.rs4
 
 Once you have downloaded the asset, place it in the assets directory of your retroPy.
 
@@ -201,4 +201,4 @@ Congratulations! You have a controllable player that walks on a solid ground and
 
 We'll cover more elements of movement such as jumping in our next turorial [Movement Part II][2].
 
-[2]:{{ site.baseurl }}{% link _posts/2023-03-25-retropy-movement-tutorial-part-2.md %}
+[2]:{{ site.baseurl }}{% link _posts/2023-03-25-retropy-tutorial-movement-part-2.md %}

@@ -1,70 +1,9 @@
 ---
 title: retroPy API
 date: 2022-05-23 12:00:00 -500
-categories: [retroPy,API's]
+categories: [retroPy APIs]
 tags: []
 ---
-
-## Introduction
-
-retroPy is a game console for retro gaming using the Raspberry Pi Pico and programmed in Python.
-Most concepts of the retroPy mimic small game engines such as PyGame Zero, Pyxel and Pico-8.
-The main idea of retroPy is to be able to create retro games using a “modern” programming language (e.g. Python).
-One of retroPy's great qualities is that it runs on a small gaming console, making it super mobile.
-retroPy is definitely a fun way to learn Python and a simple way to get into game programming.
-
-![img-description](/assets/img/console1.png)
-![img-description](/assets/img/console2.png)
-
-<span style="font-family: arcadeclassic;">INSPIRATION DAY</span>
-
-## Installation
-
-If you have one of the following consoles, there is nothing to install.
-However, you will need to install Thonny to code in Python.
-
-
-## Update
-
-> RetroPy is fresh out of the oven and currently just got of beta. Do keep a look out for updates.
-{: .prompt-info }
-
-
-
-## Example
-
-Below is an example of using retroPy as a graphic tool.
-
-```python
-from retroPy import rpy
-
-rpy.clear()
-rpy.filled_circle(120, 120, 100, 8)
-rpy.text("hello!", 95, 115, 7)
-
-rpy.show()
-```
-Next is an example of using retroPy as a simple game engine.
-
-
-```python
-from retroPy import rpy, Rect
-
-def update(dt):
-    pass
-
-def draw():
-    rpy.clear()
-    rpy.filled_circle(120, 120, 100, 8)
-    rpy.text("hello!", 95, 115, 7)
-
-def on_key_down(key):
-    pass
-def on_key_up(key):
-    pass
-
-rpy.run(update, draw, on_key_down, on_key_up)
-```
 
 ## retroPy Color Palette
 
@@ -79,7 +18,34 @@ Color values:
 
 > 0xF809, 0xFD00, 0xFF64, 0x0726, 0x2D7F, 0x83B3, 0xFBB5, 0xFE75
 
-## API Reference
+## API References
+
+### rpy
+
+`quitRun()`
+- 
+
+`pauseRun()`
+- clear the screen with color 
+
+`resumeRun()`
+- set the pixel at x, y with color
+
+`pauseTimer()`
+- draw a line starting at x1, y1 and ending at x2, y2
+
+`resumeTimer()`
+- draw a horizontal line at x, y with length and color
+
+`color_p()`
+- draw a verticle line at x, y with length and color
+
+`color_palette()`
+- draw a circle center x, y with radius and color 
+
+`color_reset()`
+- draw a filled circle center x, y with radius and color 
+
 ```
 orientation(setting)
 set the orientation of the display
@@ -91,70 +57,13 @@ setting values:
 ```
 
 
-## Graphics
+### Graphics
 
+Setup
 
-## Example of sprites
-### Actors
+`Rect(x,  y,  width,  length)`
+- A built in class.
 
-| Asteroid 4x14x14 | 
-|-|
-| ![img-description](/assets/img/asteroid.png) |
-
-
-| Bomb1 2x8x8 | Bomb2 2x8x8 |
-|-|-|
-| ![img-description](/assets/img/bomb_1.png) | ![img-description](/assets/img/bomb_2.png) |
-
-| boosters 2x16x7 |
-|-|
-| ![img-description](/assets/img/boosters.png)
-
-| boy_idle <br> 2x16x16 | boy_idle_r <br> 2x16x16 | boy_idle_l <br> 2x16x16 | boy_idle_u <br> 2x16x16 |
-|-|-|-|-|
-| ![img-description](/assets/img/boy_idle.png) | ![img-description](/assets/img/boy_idle_l.png)| ![img-description](/assets/img/boy_idle_r.png) | ![img-description](/assets/img/boy_idle_u.png) |
-
-| boy_walk_d <br> 4x16x16 | boy_walk_l <br> 4x16x16 | boy_walk_r <br> 4x16x16 | boy_walk_u <br> 4x16x16 |
-|-|-|-|-|
-| ![img-description](/assets/img/boy_walk_d.png) | ![img-description](/assets/img/boy_walk_l.png) | ![img-description](/assets/img/boy_walk_r.png) | ![img-description](/assets/img/boy_walk_u.png) |
-
-| enemy2 2x16x16x |
-|-|
-| ![img-description](/assets/img/enemy2.png) |
-
-| explosion <br> 3x16x16 | explosion1 <br> 6x16x16 | Explosion2 <br> 5x16x16 |
-|-|-|-|
-| ![img-description](/assets/img/explosion.png) | ![img-description](/assets/img/explosion1.png) | ![img-description](/assets/img/explosion2.png) |
-
-| heart 3x16x16 | Heart_red 3x16x16 |
-|-|-|
-| ![img-description](/assets/img/heart.png) | ![img-description](/assets/img/heart_red.png) |
-
-| lips 5x16x16 |
-|-|
-| ![img-description](/assets/img/lips.png) |
-
-| projectile 4x8x16 | Projectile1 2x14x6 |
-|-|-|
-| ![img-description](/assets/img/projectile.png) | ![img-description](/assets/img/projectile1.png) |
-
-| ship 3x16x16 | Ship1 1x26x12 | Ship2 1x16x16 |
-|-|-|-|
-| ![img-description](/assets/img/ship.png) | ![img-description](/assets/img/ship1.png) | ![img-description](/assets/img/ship2.png) |
-
-| projectile 4x8x16 | Projectile1 2x14x6 |
-|-|-|
-| ![img-description](/assets/img/Wall1.png) | ![img-description](/assets/img/Wall2.png) |
-
-| Test1.py 1x16x16 |
-|-|
-| ![img-description](/assets/img/Test1.png) |
-
-
-## Setup
-### Rect
-A built in class.
-(x,  y,  width,  length)
 
 `clear()`
 - clear the screen black
@@ -249,72 +158,50 @@ A built in class.
 `draw()`
 - draw the actor in the draw
 
+`collider()`
+- 
 
+`colliderEx()`
+- 
 
-## Getting Started
-### Minimal Code
+`colliderPt()`
+- 
 
-```python
-from retroPy import rpy
+`resizeCollider()`
+- set actor speed in the x direction
 
-def update(dt):
-    pass
+`drawCollider()`
+- get actor speed y direction
 
-def draw():
-    pass
+`collider_xy()`
+- set actor speed in the y direction
 
-def on_key_down(key):
-    pass
-def on_key_up(key):
-    pass
+`pos_cx()`
+- set actor positions
 
-rpy.run(update, draw, on_key_down, on_key_up)
-```
+`pos_cy()`
+- get actor x poaition
 
-### Drawing primitives
-```python
-from retroPy import rpy, Rect
+`bot_cx(position)`
+- set actor x position
 
-def update(dt):
-pass
+`id()`
+- get actor y poaition
 
-def draw():
-    rpy.clear(1)
-    rpy.filled_rect(Rect(0, 0, 24, 24), 5)
-    rpy.filled_circle(50, 50, 12, 8)
-    rpy.text("Hello World", 75, 100, 7)
-    pass
+`type()`
+- set actor y position
 
-def on_key_down(key):
-    pass
-def on_key_up(key):
-    pass
+`val()`
+- set the maximum and minimum x and y positions
 
-rpy.run(update, draw, on_key_down, on_key_up)
-```
+`mid_x()`
+- set the maximum and minimum x  positions
 
-### Sprite
-Using a sprite
-```python
-from retroPy import rpy, Rect, actor, LoadSpriteStr
-from Assets import boy
+`mid_y()`
+- set the maximum and minimum y positions
 
-player = actor(LoadSpriteStr(boy.boy_idle), 20, 20, 0, 0, 0)
-player.flipDuration(300)
-player.speed_x = 80
-player.bound_x(0,224)
+`bot_x()`
+- 
 
-def update(dt):
-    player.update(dt)
-
-def draw():
-    rpy.clear()
-    player.draw()
-def on_key_down(key):
-    pass
-
-def on_key_up(key):
-    pass
-
-rpy.run(update, draw, on_key_down, on_key_up)
-```
+`bot_y()`
+- 
