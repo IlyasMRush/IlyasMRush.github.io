@@ -40,7 +40,8 @@ social:
   name: Ilyas Rush
   email: ilyas@runescribe.com # change to your email address
   links:
-    # The first element serves as the copyright owner's link
+    # The first element serves as the copyright owner's link\
+    - https://www.youtube.com/watch?v=dQw4w9WgXcQ
     - https://runescribe.itch.io
     - https://twitter.com/username # change to your twitter homepage
     - https://github.com/username # change to your github homepage
@@ -191,12 +192,10 @@ exclude:
   - package*.json
 
 jekyll-archives:
-  enabled: [categories, tags, retropy]
+  enabled: [categories, tags]
   layouts:
-    category: retropy
+    category: category
     tag: tag
-    retropy: retropy
   permalinks:
     tag: /tags/:name/
     category: /categories/:name/
-    retropy: /retropy/:name/

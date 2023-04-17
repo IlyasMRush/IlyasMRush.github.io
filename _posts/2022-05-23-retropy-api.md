@@ -1,7 +1,7 @@
 ---
-title: retroPy API
+title: retroPy APIs
 date: 2022-05-23 12:00:00 -500
-categories: [retroPy APIs]
+categories: []
 tags: []
 ---
 
@@ -23,53 +23,44 @@ Color values:
 ### rpy
 
 `quitRun()`
-- 
 
 `pauseRun()`
-- clear the screen with color 
 
 `resumeRun()`
-- set the pixel at x, y with color
 
 `pauseTimer()`
-- draw a line starting at x1, y1 and ending at x2, y2
 
 `resumeTimer()`
-- draw a horizontal line at x, y with length and color
 
-`color_p()`
-- draw a verticle line at x, y with length and color
+`color_p(color)`
 
-`color_palette()`
-- draw a circle center x, y with radius and color 
+`color_palette(val)`
 
 `color_reset()`
-- draw a filled circle center x, y with radius and color 
 
-```
-orientation(setting)
-set the orientation of the display
-setting values:
-0 – normal
-1 – rotation 90 degrees
-2 – rotation 180 degrees
-3 – rotation 270 degrees
-```
+### Orientation (setting)
 
+Set the orientation of the display.
 
-### Graphics
+| setting values | 
+|-|
+| 0 – normal |
+| 1 – rotation 90 degrees |
+| 2 – rotation 180 degrees |
+| 3 – rotation 270 degrees |
+
+### Rect
 
 Setup
 
 `Rect(x,  y,  width,  length)`
 - A built in class.
 
-
-`clear()`
-- clear the screen black
+### Graphics
 
 `clear(color)`
-- clear the screen with color 
+- clear the screen black
+- color: use specific color to clear screen with
 
 `pixel(x, y, color)`
 - set the pixel at x, y with color
@@ -99,7 +90,7 @@ Setup
 - write a string at x, y with color
 
 
-## Actors
+## Actor
 
 `actor(ptr2spriteTable, x, y, flipDuration, speed_x, speed_y, mode)`
 - create an actor with spriteTable at x, y with flipDuration and speed_x and speed_y
@@ -108,32 +99,32 @@ Setup
 `speed(speed_x, speed_y)`
 - actor speed x direction and y direction
 
-`speed_x (property)`
-- get actor speed x direction
-
 `speed_x(speed)`
 - set actor speed in the x direction
 
-`speed_y (property)`
-- get actor speed y direction
+`speed_x`
+- get actor speed x direction
 
 `speed_y(speed)`
 - set actor speed in the y direction
+ 
+`speed_y` 
+- get actor speed y direction
 
 `pos(pos_x, pos_y)`
 - set actor positions
 
-`pos_x (property)`
-- get actor x poaition
-
 `pos_x(position)`
 - set actor x position
 
-`pos_y (property)`
-- get actor y poaition
+`pos_x` 
+- get actor x position
 
 `pos_y(position)`
 - set actor y position
+
+`pos_y` 
+- get actor y poaition
 
 `bound(xmin, xmax, ymin, ymax)`
 - set the maximum and minimum x and y positions
@@ -153,55 +144,43 @@ Setup
 `currNdx(ndx)`
 - get the current sprite index
 
-`moveTowards(x, y, speed, dt)`
-
 `draw()`
 - draw the actor in the draw
 
-`collider()`
-- 
+`moveTowards(x, y, speed, dt)`
 
-`colliderEx()`
-- 
+`collider(actor)`
 
-`colliderPt()`
-- 
+`colliderEx(actor)`
 
-`resizeCollider()`
-- set actor speed in the x direction
+`colliderPt(x, y)`
 
-`drawCollider()`
-- get actor speed y direction
+`resizeCollider(x, y, w, h)`
 
-`collider_xy()`
-- set actor speed in the y direction
+`drawCollider(color)`
 
-`pos_cx()`
-- set actor positions
+`collider_xy(actor, x, y)`
 
-`pos_cy()`
-- get actor x poaition
+`pos_cx`
 
-`bot_cx(position)`
-- set actor x position
+`pos_cy`
 
-`id()`
-- get actor y poaition
+`bot_cx`
 
-`type()`
-- set actor y position
+`bot_cy`
 
-`val()`
-- set the maximum and minimum x and y positions
+`id(val)`
 
-`mid_x()`
-- set the maximum and minimum x  positions
+`type(val)`
 
-`mid_y()`
-- set the maximum and minimum y positions
+`val(val)`
 
-`bot_x()`
-- 
+`mid_x`
 
-`bot_y()`
-- 
+`mid_y`
+
+`bot_x`
+
+`bot_y`
+
+

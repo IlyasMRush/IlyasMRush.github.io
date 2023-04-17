@@ -12,7 +12,7 @@ order: 2
 
 ### APIs and Assets
 1. [APIs][1]
-2. [Retropy Assets][2]
+2. [Assets][2]
 
 
 [1]:{{ site.baseurl }}{% link _posts/2022-05-23-retropy-api.md %}

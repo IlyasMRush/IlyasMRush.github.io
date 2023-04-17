@@ -1,18 +1,18 @@
 ---
 title: Assets
 date: 2022-05-23 12:00:00 -500
-categories: [retroPy APIs]
+categories: []
 tags: []
 ---
 
 ## Sprites
 
-| Asteroid 4x14x14 | 
+| asteroid 4x14x14 | 
 |-|
 | ![img-description](/assets/img/asteroid.png) |
 
 
-| Bomb1 2x8x8 | Bomb2 2x8x8 |
+| bomb1 2x8x8 | bomb2 2x8x8 |
 |-|-|
 | ![img-description](/assets/img/bomb_1.png) | ![img-description](/assets/img/bomb_2.png) |
 
@@ -32,11 +32,11 @@ tags: []
 |-|
 | ![img-description](/assets/img/enemy2.png) |
 
-| explosion <br> 3x16x16 | explosion1 <br> 6x16x16 | Explosion2 <br> 5x16x16 |
+| explosion <br> 3x16x16 | explosion1 <br> 6x16x16 | explosion2 <br> 5x16x16 |
 |-|-|-|
 | ![img-description](/assets/img/explosion.png) | ![img-description](/assets/img/explosion1.png) | ![img-description](/assets/img/explosion2.png) |
 
-| heart 3x16x16 | Heart_red 3x16x16 |
+| heart 3x16x16 | heart_red 3x16x16 |
 |-|-|
 | ![img-description](/assets/img/heart.png) | ![img-description](/assets/img/heart_red.png) |
 
@@ -44,15 +44,15 @@ tags: []
 |-|
 | ![img-description](/assets/img/lips.png) |
 
-| projectile 4x8x16 | Projectile1 2x14x6 |
+| projectile 4x8x16 | projectile1 2x14x6 |
 |-|-|
 | ![img-description](/assets/img/projectile.png) | ![img-description](/assets/img/projectile1.png) |
 
-| ship 3x16x16 | Ship1 1x26x12 | Ship2 1x16x16 |
+| ship 3x16x16 | ship1 1x26x12 | ship2 1x16x16 |
 |-|-|-|
 | ![img-description](/assets/img/ship.png) | ![img-description](/assets/img/ship1.png) | ![img-description](/assets/img/ship2.png) |
 
-| projectile 4x8x16 | Projectile1 2x14x6 |
+| Wall1 1x16x16 | Wall2 1x16x16 |
 |-|-|
 | ![img-description](/assets/img/Wall1.png) | ![img-description](/assets/img/Wall2.png) |
 

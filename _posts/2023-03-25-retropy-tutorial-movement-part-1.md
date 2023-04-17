@@ -1,7 +1,7 @@
 ---
 title: retroPy Movement (Part I)
 date: 2022-04-23 12:00:00 -500
-categories: [retroPy Tutorials, Movement]
+categories: []
 tags: []
 ---
 
